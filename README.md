@@ -1,7 +1,7 @@
 # Pokédex Simples
 
 ## Autor
-Seu Nome Completo — Matrícula 0000000
+Yan Rocha Lino — Matrícula 706.450.451-01
 
 ## Descrição
 Uma aplicação web que permite buscar Pokémon pelo nome ou número e visualizar informações básicas sobre eles, como imagem, altura, peso e tipo.
