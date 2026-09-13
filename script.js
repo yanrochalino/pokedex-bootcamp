@@ -14,7 +14,20 @@ async function buscarPokemon(termo) {
 
     const dados = await resposta.json();
     mostrarPokemon(dados);
+function mostrarPokemon(dados) {
+  const tiposHtml = dados.types
+    .map(t => `<span class="tipo">${t.type.name}</span>`)
+    .join("");
 
+  areaResultado.innerHTML = `
+    <h2>#${dados.id} - ${dados.name}</h2>
+    <img src="${dados.sprites.front_default}" alt="${dados.name}">
+    <p>Altura: ${dados.height / 10} m &nbsp;|&nbsp; Peso: ${dados.weight / 10} kg</p>
+    <div class="tipos">${tiposHtml}</div>
+  `;
+
+  campoBusca.value = "";
+}
   } catch (erro) {
     areaResultado.innerHTML = `
       <p class="erro">Ops! Não encontramos esse Pokémon.</p>
@@ -48,3 +61,4 @@ campoBusca.addEventListener("keydown", (evento) => {
     botaoBuscar.click();
   }
 });
+Limpa campo de busca apos exibir resultado
