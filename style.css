@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header {
+  background-color: #cc0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.busca {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#campo-busca {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #cc0000;
+  border-radius: 6px;
+}
+
+#botao-buscar {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#botao-buscar:hover {
+  background-color: #a30000;
+}
+
+.resultado {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.resultado img {
+  width: 150px;
+  height: 150px;
+}
+
+.resultado h2 {
+  text-transform: capitalize;
+  margin: 8px 0;
+}
+
+.tipos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tipo {
+  background-color: #eee;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.placeholder {
+  color: #888;
+}
+
+.erro {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: #666;
+}
