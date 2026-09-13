@@ -14,6 +14,24 @@ async function buscarPokemon(termo) {
 
     const dados = await resposta.json();
     mostrarPokemon(dados);
+    function mostrarPokemon(dados) {
+  const tiposHtml = dados.types
+    .map(t => `<span class="tipo">${t.type.name}</span>`)
+    .join("");
+
+  const habilidades = dados.abilities
+    .map(a => a.ability.name)
+    .join(", ");
+
+  areaResultado.innerHTML = `
+    <h2>#${dados.id} - ${dados.name}</h2>
+    <img src="${dados.sprites.front_default}" alt="${dados.name}">
+    <p>Altura: ${dados.height / 10} m &nbsp;|&nbsp; Peso: ${dados.weight / 10} kg</p>
+    <div class="tipos">${tiposHtml}</div>
+    <p><strong>Habilidades:</strong> ${habilidades}</p>
+  `;
+}
+  Adiciona exibicao de habilidades do pokemon  
 function mostrarPokemon(dados) {
   const tiposHtml = dados.types
     .map(t => `<span class="tipo">${t.type.name}</span>`)
